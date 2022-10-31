@@ -1,24 +1,11 @@
-## Micronaut 3.7.3 Documentation
+## The repo for reproducing hibernate issue
 
-- [User Guide](https://docs.micronaut.io/3.7.3/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.7.3/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.7.3/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+I want to see full hibernate query as asked in [StackOverflow Question](https://stackoverflow.com/questions/74139868)
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature http-client documentation
+## Changes
+I am using `SQLExtractor.from`
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+`hibernate.criteria.literal_handling_mode=inline`
 
-
-## Feature jdbc-hikari documentation
-
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
-
-
-## Feature hibernate-jpa documentation
-
-- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
-
-
+## Issue
+It shows literal value for string but not other types like `ENUM` or `LocalDate` 
