@@ -2,12 +2,16 @@ package com.example;
 
 import java.time.LocalDate;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 @Entity
 public class Cycle {
   @Id private Integer id;
 
+
+  @Enumerated(EnumType.STRING)
   private CycleType type;
 
   private LocalDate created;

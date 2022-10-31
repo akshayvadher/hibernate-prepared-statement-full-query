@@ -19,5 +19,6 @@ jpa:
       hibernate:
         hbm2ddl:
           auto: update
+        show_sql: true
         criteria:
           literal_handling_mode: inline
